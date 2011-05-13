@@ -1,0 +1,40 @@
+<h2>Generate Test PDF</h2>
+
+<%= form_for @pdf_document, :url => generate_pdf_path, :html => { :method => :get } do |f| %>
+  <section class="fields">
+    <p class="field">
+      <%= f.label :password %>
+      <span class="value">
+        <%= f.text_field :password %>
+      </span>
+    </p>
+    <p class="field">
+      <%= f.label :forbid_printing, 'No printing' %>
+      <span class="value">
+        <%= f.check_box :forbid_printing %>
+      </span>
+    </p>
+    <p class="field">
+      <%= f.label :forbid_copying, 'No copying' %>
+      <span class="value">
+        <%= f.check_box :forbid_copying %>
+      </span>
+    </p>
+    <p class="field">
+      <%= f.label :forbid_changes, 'No changes' %>
+      <span class="value">
+        <%= f.check_box :forbid_changes %>
+      </span>
+    </p>
+    <p class="field">
+      <%= f.label :forbid_annotations, 'No annotations' %>
+      <span class="value">
+        <%= f.check_box :forbid_annotations %>
+      </span>
+    </p>
+  </section>
+
+  <p class="action">
+    <%= f.submit 'Generate PDF' %>
+  </p>
+<% end %>

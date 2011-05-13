@@ -1,0 +1,12 @@
+PDF DRM Test
+===
+
+This is a Rails application that quickly generates PDF documents encrypted with
+passwords, and with DRM bits set. It is intended to help find out how different
+PDF readers react to such features.
+
+All the heavyweight lifting is done inside the prawn gem.
+https://github.com/sandal/prawn
+
+Favicon source:
+http://www.iconfinder.com/icondetails/8890/16/pdf_reader_icon
